@@ -60,6 +60,13 @@ RUN set -ex \
      curl \
      && rm -rf /var/lib/apt/lists/*
 
+# Install git lfs
+RUN set -ex \
+	&& curl -s https://packagecloud.io/install/repositories/github/git-lfs/script.deb.sh -o script-deb.sh \
+	&& bash script-deb.sh \
+	&& apt install git-lfs \
+	&& git lfs install
+
 # Copy SSH key for git private repos
 # Need to have a private key wih no passphrase
 ADD .ssh/id_rsa /root/.ssh/id_rsa
