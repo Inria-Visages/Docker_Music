@@ -2,8 +2,7 @@
 Clone the repository on your computer
 
 ## Install nvidia-docker2 (https://github.com/NVIDIA/nvidia-docker)
-  `sudo apt-get install -y nvidia-docker2`
-  `sudo pkill -SIGHUP dockerd`
+  `sudo apt install -y nvidia-docker2`
 
 ## github ssh keys
 Copy your github ssh keys (with no passphrase in a .ssh folder in the current directory)
@@ -18,23 +17,13 @@ The CONTAINER_ID is the id displayed at the end of the build process
 
 ## Run the pipeline
 
-This Docker contains two pipelines: 
+This Docker contains the music pipeline: 
 
-- folder music_v2: pipeline based on graph-cuts with a priori map
-	See music_v2/call.sh as an example of how to use the pipeline
- 	`bash call.sh`
-
-- folder music_v3.2: pipeline based on a CNN (outperforming the pipeline music_v2 in accuracy and robustness)
-	See music_v3.2/call.sh as an example of how to use the pipeline
-  	`bash call.sh`
+- pipeline based on a CNN (/music/Anima-Scripts/ms_lesion_segmentation/music_lesion_pipeline/animaMusicLesionSegmentation.py)
 
 ## Authors
 
-If you make use fo the pipeline music_v2, please cite:
-
-F. Galassi, O. Commowick, C. Barillot. Integration of Probabilistic Atlas and Graph Cuts for Automated Segmentation of Multiple Sclerosis lesions. International Society for Magnetic Resonance in Medicine (ISMRM 2018), Jun 2018, Paris, France. pp.1-6. ⟨hal-01823801⟩
-
-If you make use fo the pipeline music_v3.2, please cite:
+If you make use fo the pipeline, please cite:
 
 F. Galassi, S. Tarride, E. Vallée, O. Commowick, C. Barillot. Deep learning for multi-site ms lesions segmentation: two-step intensity standardization and generalized loss function. ISBI 2019 - IEEE International Symposium on Biomedical Imaging, Apr 2019, VENICE,Italy. pp.1. Francesca Galassi, Solène Tarride, Emmanuel Vallée, Olivier Commowick, Christian Barillot. Deep learning for multi-site ms lesions segmentation: two-step intensity standardization and generalized loss function. ISBI 2019 - IEEE International Symposium on Biomedical Imaging, Apr 2019, VENICE, Italy. pp.1. ⟨hal-02052250⟩
 
