@@ -9,5 +9,5 @@
 anima-scripts-public-root = /music/Anima-Scripts-Public/
 anima-scripts-root = /music/Anima-Scripts/
 anima = /music/anima
-extra-data-root = /music/Anima-Scripts_data/
+extra-data-root = /music/Anima-Scripts-Data-Public/
 
